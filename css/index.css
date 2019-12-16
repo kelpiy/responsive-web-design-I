@@ -1,3 +1,302 @@
-/* Use your own code or past solution for Great Idea Web Page CSS here! */
+/* http://meyerweb.com/eric/tools/css/reset/ 
+   v2.0 | 20110126
+   License: none (public domain)
+*/
 
+html, body, div, span, applet, object, iframe,
+h1, h2, h3, h4, h5, h6, p, blockquote, pre,
+a, abbr, acronym, address, big, cite, code,
+del, dfn, em, img, ins, kbd, q, s, samp,
+small, strike, strong, sub, sup, tt, var,
+b, u, i, center,
+dl, dt, dd, ol, ul, li,
+fieldset, form, label, legend,
+table, caption, tbody, tfoot, thead, tr, th, td,
+article, aside, canvas, details, embed, 
+figure, figcaption, footer, header, hgroup, 
+menu, nav, output, ruby, section, summary,
+time, mark, audio, video {
+	margin: 0;
+	padding: 0;
+	border: 0;
+	font-size: 100%;
+	font: inherit;
+	vertical-align: baseline;
+}
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure, 
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
 
+body {
+	line-height: 1;
+
+}
+ol, ul {
+	list-style: none;
+}
+blockquote, q {
+	quotes: none;
+}
+blockquote:before, blockquote:after,
+q:before, q:after {
+	content: '';
+	content: none;
+}
+table {
+	border-collapse: collapse;
+	border-spacing: 0;
+}
+
+* {
+    box-sizing: border-box;
+}
+
+html, body {
+    height: 100%;
+    font-family: 'Titillium Web', sans-serif;
+}
+
+h1, h2, h3, h4, h5 {
+    font-family: 'Bangers', cursive;
+    letter-spacing: 1px;
+    margin-bottom: 15px;
+}
+
+header {
+	display: flex;
+	align-items: flex-end;
+	width: 100%;
+	overflow: hidden;
+	background: linear-gradient(45deg, springgreen, royalblue);
+  	position: fixed; 
+	top: 0; 
+}
+
+@media(max-width: 800px) {
+	header  {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		position: relative;
+		padding-top: 20px;
+	}
+}
+
+@media(max-width: 500px) {
+	header  {
+		display: flex;
+		flex-direction: column-reverse;
+		align-items: center;
+		position: relative;
+		padding-top: 20px;
+	}
+}
+
+/* "great idea" logo */
+.logo {
+	height: 30px;
+	margin-right: 20px;
+	margin-bottom: 25px;
+}
+
+/* navigation items */
+/* desktop */
+nav {
+	display: inline-block;
+	width: 80%;
+	color: gray;
+	margin-top: 30px;
+	margin-left: 20px;
+	margin-bottom: 30px;
+}
+
+/* mobile */
+@media(max-width: 500px) {
+	nav  {
+		display: flex;
+		flex-direction: column;
+		align-items: center;
+		margin:0px;
+	}
+}
+
+/* navigation links */
+/* desktop */
+nav a {
+	text-decoration: none;
+	color: white;
+	margin-right: 45px;
+}
+
+/* mobile */
+@media(max-width: 500px) {
+	nav a {
+		text-decoration: none;
+		color: white;
+		padding: 15px 100% 15px 100%;
+		border-bottom: 1px solid white;
+	}
+}
+
+/* .intro-content is a section containing circular img, 'innovation on demand' & button elements */
+/* desktop */
+.intro-content {
+	display: flex;
+	font-family: 'Bangers', cursive;
+	font-size: 70px;
+	padding-top: 130px;
+	justify-content: flex-end;
+	width: 95%;
+}
+
+/* tablet */
+@media(max-width: 800px) {
+	.intro-content {
+		display: flex;
+		font-family: 'Bangers', cursive;
+		font-size: 80px;
+		justify-content: flex-end;
+		margin: 0px auto 0px auto;
+		padding-top: 50px;
+		width: 95%;
+	}
+}
+
+/* .left-side is "innovation" & button */
+/* desktop */
+.left-side {
+	display: flex;
+	flex-direction: column;
+	align-items: center;
+	text-align: center;
+	margin-right: 60px;
+	margin-top: 50px;
+}
+
+/* tablet */
+@media(max-width: 800px) {
+	.intro-content .left-side {
+		margin: auto;
+	} 
+	
+	.intro-content img {
+		display: none;
+	}
+}
+
+/* mobile */
+@media(max-width: 500px) {
+	.intro-content .left-side {
+		margin: auto;
+	}
+	
+	.intro-content img {
+		display: none;
+	}
+}
+
+/* "get started" button */
+button {
+	color: black;
+	width: 180px;
+	height: 30px;
+	border: solid black 1px;
+  	text-align: center;
+	text-decoration: none;
+	font-size: 16px;
+	font-family: 'Titillium Web', sans-serif;
+	margin-top: 30px;
+}
+
+/* section containing "about" & "features" divs */
+/* desktop */
+.text-content1 {
+	display: flex;
+	border-top: solid black 2px;
+	margin-top: 70px;
+	padding-bottom: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+/* mobile */
+@media(max-width: 500px) {
+	.text-content1 {
+		flex-direction: column;
+	}
+}
+
+/* "about" & "features" divs */
+.text-content1 div {
+	display: flex;
+	flex-direction: column;
+	justify-content: space-between;
+	padding-top: 50px;
+	margin: 0px 5px 0px 5px;
+}
+
+/* img of code snippets across the screen */
+/* desktop */
+.middle-img {
+	display: flex;
+	max-width: 100%; 
+	height: auto; 
+	justify-content: flex-end;
+}
+
+/* tablet */
+@media(max-width: 800px) {
+	.middle-img {
+		margin: auto;
+	}
+	
+	.intro-content img {
+		display: none;
+	}
+}
+
+/* section containing "features" products" & "services" divs */
+/* desktop */
+.text-content2 {
+	display: flex;
+	border-bottom: solid black 2px;
+	padding-bottom: 50px;
+	margin-right: 20px;
+	margin-left: 20px;
+}
+
+/* mobile */
+@media(max-width: 500px) {
+	.text-content2 {
+		flex-direction: column;
+	}
+}
+
+/* targets "services" "products" "vision" individually */
+.text-content2 div {
+	display: flex;
+	flex-direction: column;
+	padding-top: 50px;
+	margin: 0px 5px 0px 5px;
+}
+
+/* contact information */
+footer {
+	display: flex;
+	flex-direction: column;
+	margin: 50px 20px 20px 20px;
+} 
+
+/* individual lines in contact info */
+footer div {
+	margin: 0px 0px 25px 0px;
+}
+
+/* "copyright 2018" */
+.copyright {
+	display: flex;
+	justify-content: center;
+	margin: 20px 20px 100px 20px;
+}
